@@ -24,6 +24,7 @@ public class SQLiteConexion  extends SQLiteOpenHelper{
         db.execSQL(Config.DropTableCardsTable);
         onCreate(db);
     }
+
     public Cursor getAll() {
         return(getReadableDatabase().rawQuery("SELECT * FROM cards",null));
     }
